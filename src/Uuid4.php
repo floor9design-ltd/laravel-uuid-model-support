@@ -41,12 +41,6 @@ trait Uuid4
     use HasUuids;
 
     /**
-     * The laravel ID
-     * @var $id
-     */
-    protected $id;
-
-    /**
      * Generate a new UUID for the model.
      */
     public function newUniqueId(): string
