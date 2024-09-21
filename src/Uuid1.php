@@ -1,8 +1,8 @@
 <?php
 /**
- * Uuid4.php
+ * Uuid1.php
  *
- * Uuid4 trait
+ * Uuid1 trait
  *
  * php 8.2+
  *
@@ -21,9 +21,9 @@ namespace Floor9design\LaravelUuidModelSupport;
 use Ramsey\Uuid\Uuid;
 
 /**
- * Class Uuid4
+ * Class Uuid1
  *
- * Adds UUID v4 support
+ * Adds UUID v1 support
  *
  * @category  None
  * @package   Floor9design\LaravelUuidSupport
@@ -35,7 +35,7 @@ use Ramsey\Uuid\Uuid;
  * @see       https://github.com/floor9design-ltd/laravel-uuid-model-support
  * @since     File available since Release 0.0.1
  */
-trait Uuid4
+trait Uuid1
 {
     use UuidBase;
 
@@ -44,6 +44,6 @@ trait Uuid4
      */
     public function newUniqueId(): string
     {
-        return (string)Uuid::uuid4();
+        return (string)Uuid::uuid1();
     }
 }

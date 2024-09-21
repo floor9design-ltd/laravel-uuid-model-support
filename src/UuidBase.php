@@ -18,12 +18,13 @@
 
 namespace Floor9design\LaravelUuidModelSupport;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Ramsey\Uuid\Uuid;
 
 /**
  * Class Uuid4
  *
- * Adds UUID v4 support
+ * Adds UUID support and id references
  *
  * @category  None
  * @package   Floor9design\LaravelUuidSupport
@@ -35,15 +36,17 @@ use Ramsey\Uuid\Uuid;
  * @see       https://github.com/floor9design-ltd/laravel-uuid-model-support
  * @since     File available since Release 0.0.1
  */
-trait Uuid4
+trait UuidBase
 {
-    use UuidBase;
+    use HasUuids;
 
     /**
-     * Generate a new UUID for the model.
+     * Get the columns that should receive a unique identifier.
+     *
+     * @return array<int, string>
      */
-    public function newUniqueId(): string
+    public function uniqueIds(): array
     {
-        return (string)Uuid::uuid4();
+        return ['id'];
     }
 }

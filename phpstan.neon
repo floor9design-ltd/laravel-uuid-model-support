@@ -1,6 +1,6 @@
-# .gitignore
+# .phpstan.neon
 #
-# Ignored files for git
+# Setup for phpstan static analysis
 #
 # @category  None
 # @package   \
@@ -11,14 +11,7 @@
 # @link      https://github.com/floor9design-ltd/laravel-uuid-model-support
 # @link      https://floor9design.com
 # @since     File available since pre-release development cycle
-
-# IDE
-.idea
-
-# Vendor
-vendor
-
-# Testing
-docs/tests/*
-docs/phpdoc/*
-/.phpunit.cache
+parameters:
+    level: max
+    paths:
+        - src
